@@ -3,6 +3,7 @@ import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_animated_o
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_drawer.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_orientation.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_snack_bar.dart';
+import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_tap_controller.dart';
 
 import 'beginner/0_flutter_cookbook/my_animated_container.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -86,12 +87,21 @@ class _HomeState extends State<Home> {
           },
         ),
         ListTile(
-          title: const Text('Orientation'),
+          title: const Text('Orientation 화면 전환'),
           onTap: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MyOrientation()));
+          },
+        ),
+        ListTile(
+          title: const Text('Tab Controller'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyTabController()));
           },
         ),
       ],
