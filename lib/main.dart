@@ -7,6 +7,7 @@ import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_snack_bar.
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_tap_controller.dart';
 
 import 'beginner/0_flutter_cookbook/my_animated_container.dart';
+import 'beginner/0_flutter_cookbook/my_swipe_to_dismiss.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,6 +113,15 @@ class _HomeState extends State<Home> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MyFormValidation()));
+          },
+        ),
+        ListTile(
+          title: const Text('Swipe To Dismiss'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MySwipeToDismiss()));
           },
         ),
       ],
