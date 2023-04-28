@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_animated_opacity.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_drawer.dart';
+import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_snack_bar.dart';
 
 import 'beginner/0_flutter_cookbook/my_animated_container.dart';
 
@@ -72,6 +73,15 @@ class _HomeState extends State<Home> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MyDrawer()));
+          },
+        ),
+        ListTile(
+          title: const Text('SnackBar'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MySnackBar()));
           },
         ),
       ],
