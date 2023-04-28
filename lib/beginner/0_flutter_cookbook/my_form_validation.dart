@@ -14,7 +14,7 @@ class _MyFormValidationState extends State<MyFormValidation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form Validation'),
+        title: const Text('Form Validation'),
       ),
       body: Form(
         key: _formKey,
@@ -35,10 +35,10 @@ class _MyFormValidationState extends State<MyFormValidation> {
               onPressed: () {
                 if(_formKey.currentState!.validate()) {
                   // valid
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('처리중')));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('처리중')));
                 }
               },
-              child: Text('완료'),
+              child: const Text('완료'),
             ),
           )
         ],
