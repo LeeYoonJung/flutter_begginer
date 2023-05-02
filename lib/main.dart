@@ -3,10 +3,12 @@ import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_animated_o
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_drawer.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_form_validation.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_orientation.dart';
+import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_page_view.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_snack_bar.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_tap_controller.dart';
 
 import 'beginner/0_flutter_cookbook/my_animated_container.dart';
+import 'beginner/0_flutter_cookbook/my_method_channel.dart';
 import 'beginner/0_flutter_cookbook/my_swipe_to_dismiss.dart';
 
 void main() {
@@ -122,6 +124,15 @@ class _HomeState extends State<Home> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MySwipeToDismiss()));
+          },
+        ),
+        ListTile(
+          title: const Text('Method Channel'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyMethodChannel()));
           },
         ),
       ],
