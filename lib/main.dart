@@ -135,6 +135,15 @@ class _HomeState extends State<Home> {
                     builder: (context) => const MyMethodChannel()));
           },
         ),
+        ListTile(
+          title: const Text('슬라이드 되는 화면'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyPageView()));
+          },
+        ),
       ],
     );
   }
