@@ -6,6 +6,7 @@ import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_orientatio
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_page_view.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_snack_bar.dart';
 import 'package:flutter_momong_project/beginner/0_flutter_cookbook/my_tap_controller.dart';
+import 'package:flutter_momong_project/beginner/1_dust/dust_view.dart';
 
 import 'beginner/0_flutter_cookbook/my_animated_container.dart';
 import 'beginner/0_flutter_cookbook/my_method_channel.dart';
@@ -142,6 +143,21 @@ class _HomeState extends State<Home> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const MyPageView()));
+          },
+        ),
+        const ListTile(
+          title: Text(
+            '섹션1.미세먼지 앱',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        ListTile(
+          title: const Text('미세먼지 화면'),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const DustView()));
           },
         ),
       ],
